@@ -1,20 +1,212 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
+const title = "Trinetra — Agentic Intelligence for Executive Decision-Making";
+const subtitle = "Reduce procurement delays • Lower supplier risk • Accelerate executive decisions";
+const metrics = [
+  { label: "Procurement delay reduction", value: "30–40%" },
+  { label: "Negotiation outcome uplift", value: "18–27%" },
+  { label: "Operational cost improvement", value: "7–12%" },
+  { label: "Decision cycle time", value: "2× faster" }
+];
+const useCases = [
+  { title: "Hospitals", problem: "Emergency stockouts & compliance exposure", intervention: "Real-time supplier scoring + prioritized sourcing", outcome: "Procurement cycle stabilised, fewer stockouts" },
+  { title: "Retail", problem: "Price volatility & lost shelf availability", intervention: "Predictive price alerts + polite negotiation", outcome: "Improved availability and margin protection" },
+  { title: "Manufacturing", problem: "Supplier lead-time variability", intervention: "ERP-integrated risk orchestration", outcome: "Reduced production downtime" }
+];
 ---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="Trinetra: Agentic intelligence to reduce procurement delays, lower supplier risk and accelerate executive decisions." />
+  </head>
 
-<h1>Trinetra B2B – Agentic Intelligence for Enterprises</h1>
+  <body class="bg-neutral-900 text-slate-100 antialiased">
+    <main class="min-h-screen flex flex-col">
+      <!-- NAV / top bar -->
+      <header class="w-full border-b border-slate-800">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4">
+          <div class="flex items-center gap-4">
+            <img src="/images/logo.svg" alt="Trinetra logo" class="h-9 w-auto" />
+            <span class="text-slate-300 text-sm hidden md:inline">Enterprise agentic orchestration</span>
+          </div>
+          <nav class="flex items-center gap-4">
+            <a href="/about" class="text-slate-300 text-sm hover:underline">About</a>
+            <a href="/platform" class="text-slate-300 text-sm hover:underline">Platform</a>
+            <a href="/contact" class="px-4 py-2 bg-emerald-500 text-neutral-900 rounded-md font-semibold text-sm">Request Demo</a>
+          </nav>
+        </div>
+      </header>
 
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+      <!-- HERO -->
+      <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6 md:px-8 text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">Agentic Intelligence for Executive Decision-Making</h1>
+          <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">{subtitle}</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-emerald-500 text-neutral-900 font-semibold">Request Private Demo</a>
+            <a href="#impact" class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-700 text-slate-200">Board Brief (PDF)</a>
+          </div>
+
+          <p class="mt-6 text-slate-500 text-sm">For CEOs, board members and executive leadership teams. No fluff — only strategic impact.</p>
+        </div>
+      </section>
+
+      <!-- PROBLEM MATRIX -->
+      <section class="py-10 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 md:px-8">
+          <h2 class="text-2xl font-bold mb-6">The Executive Problem Matrix</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-6 rounded-lg bg-slate-800/40">
+              <h3 class="font-semibold text-lg">Cost & Margin Leakage</h3>
+              <ul class="mt-3 text-slate-300 list-disc ml-5 text-sm">
+                <li>Untracked supplier surcharges</li>
+                <li>Manual price arbitrage losses</li>
+                <li>Reactive procurement spend</li>
+              </ul>
+            </div>
+            <div class="p-6 rounded-lg bg-slate-800/40">
+              <h3 class="font-semibold text-lg">Operational & Compliance Risk</h3>
+              <ul class="mt-3 text-slate-300 list-disc ml-5 text-sm">
+                <li>Unexpected supplier failures</li>
+                <li>Regulatory exposure from ad-hoc sourcing</li>
+                <li>Audit & traceability gaps</li>
+              </ul>
+            </div>
+            <div class="p-6 rounded-lg bg-slate-800/40">
+              <h3 class="font-semibold text-lg">Decision Friction</h3>
+              <ul class="mt-3 text-slate-300 list-disc ml-5 text-sm">
+                <li>Slow executive approvals</li>
+                <li>Data scattered across silos</li>
+                <li>Inability to act preemptively</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STRATEGIC ADVANTAGE -->
+      <section class="py-12">
+        <div class="max-w-5xl mx-auto px-6 md:px-8">
+          <h2 class="text-2xl font-bold mb-4">Trinetra — Strategic Advantage</h2>
+          <p class="text-slate-300 mb-6">Boardroom outcomes, not feature lists. We deliver orchestration that integrates, predicts, and negotiates while preserving your governance and ERP investments.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-5 rounded-lg bg-slate-800/30">
+              <h4 class="font-semibold">Agentic Automation</h4>
+              <p class="text-slate-300 text-sm mt-2">Autonomous workflows that propose actions and request executive approval only when required.</p>
+            </div>
+            <div class="p-5 rounded-lg bg-slate-800/30">
+              <h4 class="font-semibold">Predictive Supplier Scoring</h4>
+              <p class="text-slate-300 text-sm mt-2">Realtime risk signals across financial, logistic and compliance dimensions.</p>
+            </div>
+            <div class="p-5 rounded-lg bg-slate-800/30">
+              <h4 class="font-semibold">Non-disruptive Integration</h4>
+              <p class="text-slate-300 text-sm mt-2">Plugs into ERP and procurement systems with minimal change management.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACT METRICS -->
+      <section id="impact" class="py-12 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 md:px-8 text-center">
+          <h2 class="text-2xl font-bold mb-6">Board-Level Impact (Representative)</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {metrics.map(metric => (
+              <div class="p-6 rounded-lg bg-slate-800/25">
+                <div class="text-2xl font-extrabold">{metric.value}</div>
+                <div class="text-slate-300 mt-2 text-sm">{metric.label}</div>
+              </div>
+            ))}
+          </div>
+          <p class="text-slate-500 text-sm mt-4">*Sample figures based on early pilots. Actual results depend on integration depth and category mix.</p>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
+      <section class="py-12">
+        <div class="max-w-6xl mx-auto px-6 md:px-8">
+          <h2 class="text-2xl font-bold mb-6">Applied Use Cases</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {useCases.map(u => (
+              <div class="p-6 rounded-lg bg-slate-800/30">
+                <h3 class="font-semibold">{u.title}</h3>
+                <p class="text-slate-300 text-sm mt-2"><strong>Problem:</strong> {u.problem}</p>
+                <p class="text-slate-300 text-sm mt-2"><strong>Intervention:</strong> {u.intervention}</p>
+                <p class="text-emerald-400 text-sm mt-3"><strong>Outcome:</strong> {u.outcome}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- CREDIBILITY STRIP -->
+      <section class="py-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="text-slate-300 text-sm">
+            <strong>Built by experts in cyber intelligence, agentic systems and enterprise ops.</strong>
+            <div class="mt-2 text-slate-500 text-xs">Confidential briefings available on request for validated partners.</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="/images/logo-partner-1.svg" alt="partner" class="h-8 opacity-70" />
+            <img src="/images/logo-partner-2.svg" alt="partner" class="h-8 opacity-70" />
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIVATE DEMO FORM -->
+      <section class="py-12 border-t border-slate-800">
+        <div class="max-w-3xl mx-auto px-6 md:px-8">
+          <h2 class="text-2xl font-bold mb-4">Request a Private Executive Demonstration</h2>
+          <p class="text-slate-300 text-sm mb-4">10 minutes for a strategic walkthrough. Provide a brief context and we will prepare a tailored board brief.</p>
+
+          <form name="exec-demo" method="POST" data-netlify="true" class="space-y-4 bg-slate-800/25 p-6 rounded-lg">
+            <input type="hidden" name="form-name" value="exec-demo" />
+            <label class="block">
+              <span class="text-slate-300 text-sm">Full name</span>
+              <input name="name" required class="mt-1 block w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-white" />
+            </label>
+
+            <label class="block">
+              <span class="text-slate-300 text-sm">Company / Hospital Group</span>
+              <input name="company" required class="mt-1 block w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-white" />
+            </label>
+
+            <label class="block">
+              <span class="text-slate-300 text-sm">Role / Title</span>
+              <input name="role" required class="mt-1 block w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-white" />
+            </label>
+
+            <label class="block">
+              <span class="text-slate-300 text-sm">Business email</span>
+              <input name="email" type="email" required class="mt-1 block w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-white" />
+            </label>
+
+            <label class="block">
+              <span class="text-slate-300 text-sm">Short context (optional)</span>
+              <textarea name="message" rows="3" class="mt-1 block w-full rounded-md border border-slate-700 bg-transparent px-3 py-2 text-white"></textarea>
+            </label>
+
+            <div class="flex justify-end">
+              <button type="submit" class="px-5 py-2 rounded-md bg-emerald-500 text-neutral-900 font-semibold">Request Demo</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="py-8 border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 md:px-8 flex items-center justify-between text-slate-500 text-sm">
+          <div>© {new Date().getFullYear()} Trinetra — Confidential briefings on request</div>
+          <div class="flex gap-4">
+            <a href="/privacy" class="hover:underline">Privacy</a>
+            <a href="/terms" class="hover:underline">Terms</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
