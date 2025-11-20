@@ -1,46 +1,68 @@
 ---
-import Logo from '../components/Logo.astro';
-
-const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
-];
+import Logo from "./Logo.astro";
 ---
 
-<nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Hibiscus AI — home">
+      <Logo />
+      <span class="sr-only">Hibiscus AI — home</span>
     </a>
-    {
-        !!navItems?.length && (
-            <ul class="flex flex-wrap gap-x-4 gap-y-1">
-                {navItems.map((item) => (
-                    <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                            {item.linkText}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        )
-    }
-</nav>
-<nav class="navbar">
-  <img src="/logo.png" alt="Hibiscus AI Logo" class="logo" />
-</nav>
-<style>
-  .logo {
-    height: 32px;
-    width: auto;
-    display: block;
-  }
+  </div>
 
-  .navbar {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-  }
-</style>
+  <style>
+    :root {
+      --site-max: 1120px;
+      --page-pad: 20px; /* same padding used in the hero */
+    }
+
+    /* header itself spans full width but contains a centered inner container */
+    .site-header{
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: visible;
+    }
+
+    /* inner container matches hero container width and padding */
+    .header-inner{
+      max-width: var(--site-max);
+      margin: 0 auto;
+      padding: 12px var(--page-pad);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* keeps logo at left edge of the content area */
+      gap: 12px;
+    }
+
+    /* remove unexpected spacing from Logo.astro if it injects block margins */
+    .brand,
+    .brand > * {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* visually-hidden text for screen readers */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* responsive tweak: smaller padding on very small screens */
+    @media (max-width: 520px) {
+      .header-inner { padding-left: 12px; padding-right: 12px; }
+    }
+  </style>
+</header>

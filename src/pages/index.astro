@@ -4,14 +4,14 @@ import Footer from "../components/Footer.astro";
 import HeroSection from "../components/HeroSection.jsx";
 ---
 
-<Header />
+<html lang="en">
+  <body style="margin:0; padding:0; background:black; color:white; min-height:100vh;">
+    <Header />
 
-<HeroSection
-  title="Hibiscus AI — Private On-Device Intelligence"
-  subtitle="A sovereign AI platform designed for enterprises."
-  ctaLabel="Request Demo"
-  ctaLink="/demo"
-  image="/hero.png"
-/>
+    <main style="margin:0; padding-top:74px; /* 200px logo + 2*12px padding */">
+      <HeroSection />
+    </main>
 
-<Footer />
+    <Footer />
+  </body>
+</html>
